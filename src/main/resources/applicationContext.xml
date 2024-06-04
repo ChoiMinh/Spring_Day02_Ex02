@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!-- Speaker 정의 -->
+   <bean id="speaker" class="com.example.myweb.ex.SonySpeaker"></bean> 
+
+    <!-- TV 빈 정의, 생성자 주입 사용 -->
+    <bean id="tv" class="com.example.myweb.ex.SamsungTV">
+       <constructor-arg ref="speaker"></constructor-arg>
+    </bean>
+
+
+</beans>
